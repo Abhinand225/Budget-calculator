@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUDGET CALCULATOR</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100&family=Fredericka+the+Great&family=Fredoka+One&family=Goldman&family=Lexend&family=Righteous&family=Rubik+Glitch&family=Shrikhand&family=Source+Serif+Pro:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h2 class="heading">PERSONAL BUDGET APP</h2>
+        <button class="btn3" onclick="reset()">RESET</button>
+        <hr>
+        
+        <div class="left">
+            <div class="display">
+                <div class="budget">
+                    <p>BUDGET</p>
+                    <span class="material-symbols-outlined">
+                        payments
+                        </span>
+                        <div class="budget_amount"><span class="currency-symbol">₹ </span><span id="budget_amount">0</span></div>
+            
+                </div>
+                <div class="balance">
+                    <p>BALANCE</p>
+                    <span class="material-symbols-outlined">
+                        currency_rupee
+                        </span>
+                        <div class="balance_amount"><span class="currency-symbol">₹ </span><span id="balance_amount">0</span></div>
+
+            
+                </div>
+                <div class="expense">
+                    <p>EXPENSES</p>
+                    <span class="material-symbols-outlined">
+                        price_change
+                        </span>   
+                        <div class="expense-amount-right"><span class="currency-symbol">₹ </span><span id="expense_amount_1">0</span></div>
+
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr class="tr">
+                        <th class="thead">Expense Title</th>
+                        <th class="thead">Expense amount</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="table_list">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="right">
+            <div class="input1">
+                <label for=""class="content">Please Enter Your Budget</label><br>
+                <input type="text" class="inpt_area"id="amnt" ><br>
+                <input type="button" value="CALCULATE" onclick="calculate()" class="btn" >
+            </div>
+            <div class="input2">
+                <label for=""class="content">Please Enter Your Expense</label><br>
+                <input type="text" class="inpt_area" id="title" ><br><br>
+                <label for="" class="content">Please Enter Amount</label><br>
+                <input type="text" class="inpt_area" id="expense_amnt" ><br>
+                <input type="button" value="Add Expense" class="btn2" onclick="add_expense()">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
